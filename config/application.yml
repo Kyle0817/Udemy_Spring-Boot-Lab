@@ -1,0 +1,23 @@
+server:
+  port: 8082
+  servlet:    context-path: /api
+  
+logging:  level:    root: info
+    '[com.udemy]': debug
+  file:    name: logs/udemy.log
+
+book:
+  name: 互聯網世界觀
+  author: 李善友
+  isbn: 1234567989
+  description: ${book.author} 覺得 ${book.name}, 這本書不錯
+    
+spring:  datasource:    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost;databaseName=book
+    username: skbbonus
+    password: "!qaz@wsx"
+      jpa:    hibernate:      ddl-auto: update
+    show-sql: true
+    
+  thymeleaf:    mode: HTML
+ 
