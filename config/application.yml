@@ -20,4 +20,5 @@ spring:  datasource:    driver-class-name: com.microsoft.sqlserver.jdbc.SQLSer
     show-sql: true
     
   thymeleaf:    mode: HTML
- 
+    cache: false
+
